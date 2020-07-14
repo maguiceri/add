@@ -40,12 +40,14 @@ class App extends React.Component{
   render() {
 
     return(
+      <React.Fragment>
+
       <div>
         <input value={this.state.inputValue} onChange = { (e) => this.handleChange (e) } type="text" />
         <button onClick={ () => this.handleClick () }>agregar</button>
-      
+      </div>
 
-    <ul>
+      <ul>
     
       {this.state.tasks.map ( (task, key) => {
         return (
@@ -54,8 +56,8 @@ class App extends React.Component{
 
       })}
 
-    </ul>
-    </div>
+      </ul>
+      </React.Fragment>
 
     )
 
